@@ -5,13 +5,16 @@ body {
 }
 
 .web_page{
+  position: relative;
   width: 1024px;
   height: auto;
   margin-right: auto;
   margin-left: auto;
+  /* background-image: url("../src/img/bg2.png"); */
+  z-index: -2;
 }
 
-.starter-template {
+/* .starter-template {
   padding: 3rem 1.5rem;
   text-align: center;
 }
@@ -21,8 +24,8 @@ body {
   right: auto;
   bottom: 0;
   left: 5%;
-  background-color: #e5e5e5;
-}
+  background-color: #e5e5e5; 
+}*/
 
 
 
@@ -30,7 +33,7 @@ body {
  * Dummy devices (replace them with your own or something else entirely!)
  */
 
- .product-device {
+ /* .product-device {
   position: absolute;
   right: 10%;
   bottom: -30%;
@@ -68,38 +71,158 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
+} */
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .bd-placeholder-img-lg {
     font-size: 3.5rem;
   }
+} */
+.default_page{
+  background-image: url("../src/img/bg2.png");
+  height: 768px;
 }
-
-.bg-nav {
+.main_page{
+  background-image: url("../src/img/main/bg1.png");
+  position: relative;
+  z-index: -1;
+}
+.main_nav{
+  width: auto;
+  height: 60px;
   background-image: url(../src/img/main/nav_bar.png);
+  border-bottom: 3px solid #3e0846;
+  position: relative;
+  top: 0;
+  z-index: 2;
+}
+.pic_wall{
+  width: 512px;
+  margin-left: 20px;
+  border-left: 2px solid #3e0846;
+  border-right: 2px solid #3e0846;
+  border-bottom: 2px solid #3e0846;
+  position: absolute;
+  top: 4px;
+}
+.pic_wall img{
+  z-index: 2;
 }
 
-.pic1 {
-  background-image: url(../src/img/main/bg1.png);
-  background-repeat: no-repeat;
-}
-
-.text1 {
-  background-image: url(../src/img/aboutme/text_mask.png);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-}
-
-.qa {
-  background-image: url(../src/img/aboutme/bg-chat.png);
-}
-
-.area3 {
+.fm_page{
+  width: auto;
+  height: 900px;
   background-image: url(../src/img/bg2.png);
 }
+.fm_nav{
+  height: 60px;
+  text-align: center;
+}
+.fm_nav h1{
+  position: relative;
+  color: #350600;
+  top: 2px;
+  left: 0;
+}
+.fm_pics{
+  padding-top: 20px;
+  height: 650px;
+}
+.fm_pic_1{
+  position: relative;
+  left: 260px;
+  width: 400px;
+  height: 540px;
+  z-index: 2;
+}
+.fm_pic_2{
+  position: absolute;
+  top: 900px;
+  left: 40px;
+  width: 250px;
+  height: 337px;
+  z-index: 1;
+}
+.fm_pic_3{
+  position: absolute;
+  top: 900px;
+  left: 610px;
+  width: 250px;
+  height: 337px;
+  z-index: 1;
+}
+.fm_about{
+  position: relative;
+  top: -20px;
+  left: 112px;
+  width: 800px;
+  height: 200px;
+  background-image: url("../src/img/aboutme/text_mask.png");
+}
+.shi_page{
 
-.shi {
-  background-image: url(../src/img/shi/bg-lion.png);
-  background-repeat: no-repeat;
+}
+.shi_page .shi_nav{
+  background-image: url("../src/img/shi/红色分割层.png");
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  height: 60px;
+}
+.shi_page .shi_nav h1{
+  color: white;
+  position: relative;
+  top: 4px;
+  left: 0;
+}
+.shi_page .shi_pic{
+  height: 708px;
+  position: relative;
+  left: 5%;
+  top: -2px;
+  z-index: 0;
+}
+.abm_page{
+  height: 560px;
+}
+.abm_page .abm_nav{
+  height: 60px;
+  background-image: url("../src/img/aboutme/purple.png");
+}
+.abm_page .abm_chat{
+  height: 500px;
+  width: 892px;
+  position: relative;
+  left: 66px;
+  background-image: url("../src/img/aboutme/bg-chat.png");
+}
+.email_page{
+  height: 208px;
+  background-color: white;
+  /* 移入事件颜色改变为#f6fafc */
+}
+.author_page{
+  height: 400px;
+  background-color: #ecf2f8;
+}
+.author_page .author_card{
+  width: 300px;
+  height: 350px;
+  float: left;
+  margin-left: 15px;
+  margin-top: 25px;
+  background-color: white;
+}
+.msg_pic{
+  position: relative;
+  left: 90px;
+  top: 10px;
+  width: 120px;
+  height: 125px;
+  border-bottom: 5px solid #f6fafc;
+}
+
+.foot_page{
+  height: 160px;
+  background-color: white;
 }
