@@ -1,0 +1,105 @@
+body {
+  padding-top: 0rem;
+  height: auto;
+  background-image: url("../src/img/cool-background.png");
+}
+
+.web_page{
+  width: 1024px;
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.product-device-2 {
+  top: -25%;
+  right: auto;
+  bottom: 0;
+  left: 5%;
+  background-color: #e5e5e5;
+}
+
+
+
+/*
+ * Dummy devices (replace them with your own or something else entirely!)
+ */
+
+ .product-device {
+  position: absolute;
+  right: 10%;
+  bottom: -30%;
+  width: 300px;
+  height: 540px;
+  background-color: #333;
+  border-radius: 21px;
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+
+.product-device::before {
+  position: absolute;
+  top: 10%;
+  right: 10px;
+  bottom: 10%;
+  left: 10px;
+  content: "";
+  background-color: rgba(255, 255, 255, .1);
+  border-radius: 5px;
+}
+
+.product-device-2 {
+  top: -25%;
+  right: auto;
+  bottom: 0;
+  left: 5%;
+  background-color: #e5e5e5;
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+.bg-nav {
+  background-image: url(../src/img/main/nav_bar.png);
+}
+
+.pic1 {
+  background-image: url(../src/img/main/bg1.png);
+  background-repeat: no-repeat;
+}
+
+.text1 {
+  background-image: url(../src/img/aboutme/text_mask.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.qa {
+  background-image: url(../src/img/aboutme/bg-chat.png);
+}
+
+.area3 {
+  background-image: url(../src/img/bg2.png);
+}
+
+.shi {
+  background-image: url(../src/img/shi/bg-lion.png);
+  background-repeat: no-repeat;
+}
