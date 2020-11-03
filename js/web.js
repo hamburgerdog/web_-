@@ -143,10 +143,22 @@ $(document).ready(function () {
             'top':'-=5px'
         });
     });
-    // $("#card .msg_pic").click(function (e) { 
-    //     e.preventDefault();
-    //     $("").animate({
-    //         ''
-    //     })
-    // });
+    $("#card1 .msg_pic img").mouseenter(function (e) { 
+        $(this).addClass("animated rubberBand");
+    });
+    $("#card1 .msg_pic img").mouseleave(function (e) { 
+        $(this).removeClass("animated rubberBand");
+    });
+    $("#card2 .msg_pic img").mouseenter(function (e) { 
+        $(this).addClass("animated rubberBand");
+    });
+    $("#card2 .msg_pic img").mouseleave(function (e) { 
+        $(this).removeClass("animated rubberBand");
+    });
+    $("#card3 .msg_pic img").mouseenter(function (e) { 
+        $(this).addClass("animated rubberBand");
+    });
+    $("#card3 .msg_pic img").mouseleave(function (e) { 
+        $(this).removeClass("animated rubberBand");
+    });
 });
