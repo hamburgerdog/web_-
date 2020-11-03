@@ -259,13 +259,3 @@ body {
   height: 160px;
   background-color: white;
 }
-
-/* @keyframes author_pic_swag {
-  25%{transform:rotate(10deg)}
-  75%{transform:rotate(-10deg)}
-  100%{transform:rotate(0deg)}
-}
-
-.author_card .msg_pic .msg_pic_select{
-  animation: author_pic_swag 2s 1 ease-in;
-} */
