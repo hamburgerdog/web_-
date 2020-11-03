@@ -1,7 +1,9 @@
 body {
-  padding-top: 0rem;
-  height: auto;
+  padding-top: 0px;
+  background-color: aqua;
   background-image: url("../src/img/cool-background.png");
+  position: relative;
+  z-index: -100;
 }
 
 .web_page{
@@ -204,24 +206,55 @@ body {
 .author_page{
   height: 400px;
   background-color: #ecf2f8;
+  position: relative;
+  z-index: 1;
 }
 .author_page .author_card{
-  width: 300px;
+  width: 250px;
   height: 350px;
   float: left;
-  margin-left: 15px;
+  margin-left: 45px;
   margin-top: 25px;
   background-color: white;
+  border-radius: 25px 15px 25px 15px;
+  position: relative;
+}
+.card_select{
+  box-shadow: 2px 5px 20px #e1e2e3;
 }
 .msg_pic{
   position: relative;
-  left: 90px;
+  left: 65px;
   top: 10px;
   width: 120px;
   height: 125px;
   border-bottom: 5px solid #f6fafc;
 }
-
+.msg_txt{
+  width: 250px;
+  height: 200px;
+  text-align: center;
+  position: relative;
+  padding: 10px;
+  left: 0px;
+  top: 10px;
+  cursor: default;
+}
+.msg_name{
+  font-size: 28px;
+  color: #b2b4b6;
+  margin-bottom: 4px;
+}
+.msg_grade{
+  font-size: 18px;
+  color: #b2b4b6;
+  margin-bottom: 10px;
+}
+.msg_info{
+  margin-left: 20px;
+  font-size: 20px;
+  color: #94969a;
+}
 .foot_page{
   height: 160px;
   background-color: white;

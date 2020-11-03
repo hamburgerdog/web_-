@@ -3,10 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>光 | 网页设计</title>
-
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/web.js"></script>
       <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/starter-template.css">
+    <link rel="stylesheet" href="css/animates.min.css">
   </head>
   <body>  
     <div class="web_page">
@@ -61,20 +63,35 @@
       <!-- 联系页 -->
       <div class="email_page"></div>
       <!-- 作者页 -->
-      <div class="author_page">
-        <div class="author_card" style="margin-left: 50px;">
+      <div class="author_page"">
+        <div id="card1" class="author_card" style="margin-left: 100px;">
           <div class="msg_pic">
             <img style="width: 120px;height: 120px;" src='src/img/author/杰哥.png'/>
           </div>
-        </div>
-        <div class="author_card">
-          <div class="msg_pic">
-            <img style="width: 120px;height: 120px;" src='src/img/author/永聪同学.png'/>
+          <div class="msg_txt">
+            <div class="msg_name"> 杰哥 </div>
+            <div class="msg_grade">大三在读</div>
+            <div class="msg_info">人生如逆旅，<br>我亦是行人。</div>
           </div>
         </div>
-        <div class="author_card">
+        <div id="card2" class="author_card">
+          <div class="msg_pic">
+            <img  style="width: 120px;height: 120px;" src='src/img/author/永聪同学.png'/>
+          </div>
+          <div class="msg_txt">
+            <div class="msg_name">永聪同学</div>
+            <div class="msg_grade">大一在读</div>
+            <div class="msg_info">古来贤者皆寂寞，<br>惟有饮者留其名。</div>
+          </div>
+        </div>
+        <div id="card3" class="author_card">
           <div class="msg_pic">
             <img style="width: 120px;height: 120px;" src='src/img/author/浚仔.png'/>
+          </div>
+          <div class="msg_txt">
+            <div class="msg_name"> 浚仔 </div>
+            <div class="msg_grade">大三在读</div>
+            <div class="msg_info">好风凭借力，<br>送我上青云。</div>
           </div>
         </div>
       </div>
@@ -125,7 +142,6 @@
 
     </div>
   </body>
-
   <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
       <!-- <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.min.js"></script> -->
 </html>
