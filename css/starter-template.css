@@ -130,12 +130,28 @@ body {
   padding-top: 20px;
   height: 650px;
 }
+.fm_pic_1 img {
+  width: 450px;
+  height: 606px;
+  transition: 1s;
+}
+.fm_pic_2 img {
+  width: 350px;
+  height: 472px;
+  transition: 1s;
+}
+.fm_pic_3 img {
+  width: 350px;
+  height: 472px;
+  transition: 1s;
+}
 .fm_pic_1{
   position: relative;
   left: 260px;
   width: 400px;
   height: 540px;
   z-index: 2;
+  transition: 1s;
 }
 .fm_pic_2{
   position: absolute;
@@ -144,6 +160,7 @@ body {
   width: 250px;
   height: 337px;
   z-index: 1;
+  transition: 1s;
 }
 .fm_pic_3{
   position: absolute;
@@ -152,6 +169,7 @@ body {
   width: 250px;
   height: 337px;
   z-index: 1;
+  transition: 1s;
 }
 .fm_about{
   position: relative;
