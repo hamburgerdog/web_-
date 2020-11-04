@@ -143,6 +143,32 @@ $(document).ready(function () {
             'top':'-=5px'
         });
     });
+    $(".email_page").mouseenter(function () { 
+        $(this).css({
+            'background-color':'#cde1f5'
+        })
+        $(".email_msg").css({
+            'background-color':'#ecf2f8',
+            'border-color':'white'
+        });
+    });
+    $(".email_page").mouseleave(function () { 
+        $(this).css({
+            'background-color':'white'
+        })
+        $(".email_msg").css({
+            'background-color':'white',
+            'border-color':'#e1e2e3'
+        });
+    });
+    $(".email_msg").click(function (e) { 
+        $(this).addClass("animated bounceIn");
+        $(".email_msg_tip").css('display','block');
+        $(".email_msg_tip").addClass("animated fadeInDownBig");
+    });
+    $(".email_page").mouseleave(function (e) { 
+        $(".email_msg").removeClass("animated bounceIn")
+    });
     $("#card1 .msg_pic img").mouseenter(function (e) { 
         $(this).addClass("animated rubberBand");
     });
