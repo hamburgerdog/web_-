@@ -242,32 +242,40 @@ body {
   border: 2px solid #e1e2e3;
   text-align: center;
   position: relative;
+  cursor: pointer;
 }
 .email_page .email_txt .email_msg p{
   font-size: 20px;
   margin-top: 8px;
 }
 .email_page .email_msg_tip{
-  height: 188px;
+  height: 136px;
   width: 240px;
   margin: 10px;
   position: relative;
-  left: 764px;
-  top: -165px;
-  border-radius: 20px;
+  left: 750px;
+  top: -140px;
+  border-radius: 10px;
   display: none;
+  box-shadow: 1px 1px 10px #e1e2e3;
 }
 .email_page .email_msg_tip .tip_top{
   width: auto;
   height: 58px;
-  background-color: #ecf2f8;
-  border-radius: 20px 20px 0px 0px;
+  background-color: #39c4f7;
+  color: white;
+  text-align: center;
+  font-size: 36px;
+  border-radius: 10px 10px 0px 0px;
 }
 .email_page .email_msg_tip .tip_msg{
   width: auto;
-  height: 130px;
+  height: 78px;
   background-color: white;
-  border-radius: 0 0 20px 20px ;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 15px;
+  border-radius: 0 0 10px 10px ;
 }
 .author_page{
   height: 400px;
