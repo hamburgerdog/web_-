@@ -1,6 +1,5 @@
 body {
   padding-top: 0px;
-  background-color: aqua;
   background-image: url("../src/img/cool-background.png");
   position: relative;
   z-index: -100;
@@ -220,6 +219,44 @@ body {
   height: 208px;
   background-color: white;
   /* 移入事件颜色改变为#f6fafc */
+  cursor: default;
+}
+
+.email_page .email_txt{
+  margin-left: 200px;
+  padding-top: 30px;
+}
+
+.email_page .email_txt .email_txt1{
+  font-size: 24px;
+}
+.email_page .email_txt .email_txt2{
+  font-size: 15px;
+  margin-top: 15px;
+}
+.email_page .email_txt .email_msg{
+  width: 400px;
+  height: 50px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 2px solid #e1e2e3;
+  text-align: center;
+  position: relative;
+}
+.email_page .email_txt .email_msg p{
+  font-size: 20px;
+  margin-top: 8px;
+}
+.email_page .email_msg_tip{
+  height: 188px;
+  width: 240px;
+  margin: 10px;
+  background-color: #350600;
+  position: relative;
+  left: 764px;
+  top: -165px;
+  border-radius: 30px;
+  display: none;
 }
 .author_page{
   height: 400px;
