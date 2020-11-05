@@ -163,11 +163,18 @@ $(document).ready(function () {
     });
     $(".email_msg").click(function (e) { 
         $(this).addClass("animated bounceIn");
-        $(".email_msg_tip").css('display','block');
-        $(".email_msg_tip").addClass("animated fadeInDownBig");
-    });
-    $(".email_page").mouseleave(function (e) { 
-        $(".email_msg").removeClass("animated bounceIn")
+        let tip = $(".email_msg_tip");
+        tip.css('display','block');
+        tip.addClass("animated fadeInDown");
+        setTimeout(function(){
+            $(".email_msg").removeClass("animated bounceIn");
+            tip.removeClass("animated fadeInDown");
+            tip.addClass("animated fadeOutUp");
+        },2000)
+        setTimeout(function(){
+            tip.css('display','none');
+            tip.removeClass("animated fadeOutUp ");
+        },2500)
     });
     $("#card1 .msg_pic img").mouseenter(function (e) { 
         $(this).addClass("animated rubberBand");

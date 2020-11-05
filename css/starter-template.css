@@ -217,7 +217,7 @@ body {
   margin-top: 15px;
 }
 .email_page .email_txt .email_msg{
-  width: 400px;
+  width: 440px;
   height: 50px;
   margin-top: 10px;
   border-radius: 5px;
@@ -233,12 +233,23 @@ body {
   height: 188px;
   width: 240px;
   margin: 10px;
-  background-color: #350600;
   position: relative;
   left: 764px;
   top: -165px;
-  border-radius: 30px;
+  border-radius: 20px;
   display: none;
+}
+.email_page .email_msg_tip .tip_top{
+  width: auto;
+  height: 58px;
+  background-color: #ecf2f8;
+  border-radius: 20px 20px 0px 0px;
+}
+.email_page .email_msg_tip .tip_msg{
+  width: auto;
+  height: 130px;
+  background-color: white;
+  border-radius: 0 0 20px 20px ;
 }
 .author_page{
   height: 400px;
