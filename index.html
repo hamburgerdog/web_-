@@ -33,13 +33,13 @@
         <!-- 轮播图 -->
         <div class="fm_pics">
           <div class="fm_pic_1">
-            <img src="src/img/fenmo/2.png" alt="主图" style="width: 450px;height: 606px;">
+            <img src="src/img/fenmo/2.png" alt="主图">
           </div>
           <div class="fm_pic_2">
-            <img src="src/img/fenmo/1.png" alt="左图" style="width: 350px;height: 472px;">
+            <img src="src/img/fenmo/1.png" alt="左图">
           </div>
           <div class="fm_pic_3">
-            <img src="src/img/fenmo/3.png" alt="右图" style="width: 350px;height: 472px;">
+            <img src="src/img/fenmo/3.png" alt="右图">
           </div>
         </div>
         <div class="fm_about"></div>
@@ -141,6 +141,31 @@
       <!-- </div> -->
 
     </div>
+    <!--script-->
+    <script>
+      var fmPics = [];
+      var fmClassName = [];
+
+      //dummy push(tired
+      fmPics.push(document.getElementsByClassName("fm_pic_1")[0]);
+      fmPics.push(document.getElementsByClassName("fm_pic_2")[0]);
+      fmPics.push(document.getElementsByClassName("fm_pic_3")[0]);
+
+      //get class name
+      for (var e of fmPics) {
+        fmClassName.push(e.getAttribute("class"));
+      }
+
+      setInterval(function next() {
+        //swap the class
+        fmClassName.unshift(fmClassName[fmClassName.length - 1]);
+        fmClassName.pop();
+        //process swaping
+        for (i = 0; i < fmClassName.length; i++) {
+          fmPics[i].setAttribute("class", fmClassName[i]);
+        }
+      }, 2000);
+    </script>
   </body>
   <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
       <!-- <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.min.js"></script> -->
