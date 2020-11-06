@@ -143,6 +143,45 @@ $(document).ready(function () {
             'top':'-=5px'
         });
     });
+    $(".email_page").mouseenter(function () { 
+        $(this).css({
+            'background-color':'#cde1f5'
+        })
+        $(".email_msg").css({
+            'background-color':'#ecf2f8',
+            'border-color':'white'
+        });
+    });
+    $(".email_page").mouseleave(function () { 
+        $(this).css({
+            'background-color':'white'
+        })
+        $(".email_msg").css({
+            'background-color':'white',
+            'border-color':'#e1e2e3'
+        });
+    });
+    $(".email_msg").click(function (e) { 
+        $(this).addClass("animated bounceIn");
+        $(this).zclip({
+            path:'js/ZeroClipboard.swf',
+            copy:function(){
+                return $('.email_msg p').val();
+            }
+        });
+        let tip = $(".email_msg_tip");
+        tip.css('display','block');
+        tip.addClass("animated fadeInDown");
+        setTimeout(function(){
+            $(".email_msg").removeClass("animated bounceIn");
+            tip.removeClass("animated fadeInDown");
+            tip.addClass("animated fadeOutUp");
+        },2000)
+        setTimeout(function(){
+            tip.css('display','none');
+            tip.removeClass("animated fadeOutUp ");
+        },2500)
+    });
     $("#card1 .msg_pic img").mouseenter(function (e) { 
         $(this).addClass("animated rubberBand");
     });
