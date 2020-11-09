@@ -28,14 +28,11 @@
             <img src="src/img/main/wall.png" alt="壁画">
           </div>
           <div class="wall_txt">
-            <p>欢迎来到 光</p>
-            <p>我们即将同你一起开启</p>
-            <p>来一场<a>文化寻根之旅</a></p>
-            <p><br>现在，就让我们开始吧</p>
+            <p>欢迎来到 光</p><p>我们即将同你一起开启</p><p>来一场<a>文化寻根之旅</a></p><p><br>现在，就让我们开始吧</p>
           </div>
           <div class="wall_txt_bottom">_______</div>
         </div>
-
+ 
         <div></div>
       </div>
 
@@ -212,6 +209,19 @@
           fmPics[i].setAttribute("class", fmClassName[i]);
         }
       }, 2000);
+
+      //var texts = document.getElementsByClassName("wall_txt")[0].getElementsByTagName("p");
+      var texts = document.getElementsByClassName("wall_txt")[0];
+      var str = texts.innerHTML.trim();
+      var length = str.length;
+      var index = 0;
+      setInterval(function() {
+        index++;
+        texts.innerHTML = str.substr(0, index);
+        if (texts.innerHTML == length) {
+          clearInterval();
+        }
+      }, 100);
     </script>
   </body>
   <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
