@@ -5,7 +5,30 @@ body{
   z-index: -100;
 }
 p,h1{
+  font-family: 'alibaba_puhui';
+  /* font-family: 'apple'; */
   cursor: default;
+}
+@font-face{
+  font-family: alibaba_puhui;
+  src:  url("../src/font/alibaba-puhui/Alibaba-PuHuiTi-Regular.otf"),
+        url("../src/font/alibaba-puhui/Alibaba-PuHuiTi-Regular.ttf");
+}
+@font-face{
+  font-family: interEng;
+  src: url("../src/font/inter/Inter-UI-Regular.ttf");
+}
+@font-face{
+  font-family: apple;
+  src: url("../src/font/apple/PingFang_Bold.ttf")
+}
+@font-face{
+  font-family: japanTxt;
+  src:url("../src/font/japanTxt/japan.ttf")
+}
+@font-face{
+  font-family: genshin;
+  src:url("../src/font/japanTxt/GenShinGothic-Monospace-Regular.ttf")
 }
 
 .web_page{
@@ -102,6 +125,7 @@ p,h1{
   z-index: 2;
 }
 .main_nav_guang{
+  color: #3e0846;
   position: relative;
   left: 100px;
   top: 5px;
@@ -113,7 +137,11 @@ p,h1{
   position: relative;
   font-size: 26px;
   left: 820px;
-  top: -50px;
+  top: -55px;
+}
+.main_nav_ab a{
+  color: #3e0846;
+  font-family: 'japanTxt';
 }
 .pic_wall{
   width: 512px;
@@ -128,6 +156,7 @@ p,h1{
   z-index: 2;
 }
 .wall_txt{
+  color: #3e0846;
   position: relative;
   width: 380px;
   left: 600px;
@@ -136,17 +165,18 @@ p,h1{
 }
 .wall_txt p{
   margin: 10px;
+  font-family: 'interEng';
 }
 .wall_txt p a{
   cursor: pointer;
 }
 .wall_txt_bottom{
   position: relative;
-  left:730px;
-  top: -10px;
-  font-size: 60px;
-  width: 250px;
-  height: 10px;
+  background-color: #3e0846;
+  left: 725px;
+  top: 60px;
+  width: 180px;
+  height: 2px;
 }
 .fm_page{
   width: auto;
@@ -158,6 +188,7 @@ p,h1{
   text-align: center;
 }
 .fm_nav h1{
+  /* font-family: 'interEng'; */
   position: relative;
   color: #350600;
   top: 2px;
@@ -209,6 +240,7 @@ p,h1{
   transition: 1s;
 }
 .fm_about{
+  color: #350600;
   position: relative;
   top: -20px;
   left: 112px;
@@ -228,6 +260,7 @@ p,h1{
   padding-top: 10px;
 }
 .fm_txt p{
+  font-family: 'interEng';
   margin: 5px;
 }
 .shi_page{
@@ -271,11 +304,15 @@ p,h1{
   left: 180px;
 }
 .shi_txt{
+  color: #3e0846;
   font-size: 36px;
   left: 620px;
   position: relative;
   top: -600px;
   width: 300px;
+}
+.shi_txt p{
+  font-family: 'japanTxt';
 }
 .shi_txt .shi_head_txt{
   position: relative;
@@ -405,12 +442,14 @@ p,h1{
 .msg_grade{
   font-size: 18px;
   color: #b2b4b6;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  margin-top: 10px;
 }
 .msg_info{
   margin-left: 20px;
-  font-size: 20px;
+  font-size: 23px;
   color: #94969a;
+  font-family: 'japanTxt';
 }
 .foot_page{
   height: 160px;
