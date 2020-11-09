@@ -4,9 +4,8 @@ body{
   position: relative;
   z-index: -100;
 }
-p,h1{
+p,h1,a{
   font-family: 'alibaba_puhui';
-  /* font-family: 'apple'; */
   cursor: default;
 }
 @font-face{
@@ -40,71 +39,6 @@ p,h1{
   /* background-image: url("../src/img/bg2.png"); */
   z-index: -2;
 }
-
-/* .starter-template {
-  padding: 3rem 1.5rem;
-  text-align: center;
-}
-
-.product-device-2 {
-  top: -25%;
-  right: auto;
-  bottom: 0;
-  left: 5%;
-  background-color: #e5e5e5; 
-}*/
-
-
-
-/*
- * Dummy devices (replace them with your own or something else entirely!)
- */
-
- /* .product-device {
-  position: absolute;
-  right: 10%;
-  bottom: -30%;
-  width: 300px;
-  height: 540px;
-  background-color: #333;
-  border-radius: 21px;
-  -webkit-transform: rotate(30deg);
-  transform: rotate(30deg);
-}
-
-.product-device::before {
-  position: absolute;
-  top: 10%;
-  right: 10px;
-  bottom: 10%;
-  left: 10px;
-  content: "";
-  background-color: rgba(255, 255, 255, .1);
-  border-radius: 5px;
-}
-
-.product-device-2 {
-  top: -25%;
-  right: auto;
-  bottom: 0;
-  left: 5%;
-  background-color: #e5e5e5;
-}
-
-.bd-placeholder-img {
-  font-size: 1.125rem;
-  text-anchor: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-} */
-
-/* @media (min-width: 768px) {
-  .bd-placeholder-img-lg {
-    font-size: 3.5rem;
-  }
-} */
 .default_page{
   background-image: url("../src/img/bg2.png");
   height: 768px;
@@ -454,4 +388,19 @@ p,h1{
 .foot_page{
   height: 160px;
   background-color: white;
+}
+.foot_page_txt{
+  color: #94969a;
+  width: 500px;
+  position: relative;
+  margin-left: auto;
+  top: 45px;
+  margin-right: auto;
+  text-align: center;
+}
+.foot_page_txt p{
+  margin: 0;
+}
+.foot_page_txt a{
+  color: #00c181;
 }

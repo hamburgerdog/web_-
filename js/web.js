@@ -200,4 +200,18 @@ $(document).ready(function () {
     $("#card3 .msg_pic img").mouseleave(function (e) { 
         $(this).removeClass("animated rubberBand");
     });
+    $(".foot_page").mouseenter(function () { 
+        $(".foot_page_txt").css({
+            'left':'+=5px',
+            'top':'+=5px'
+        });
+        $(".foot_page_txt").addClass("animated pulse");
+    });
+    $(".foot_page").mouseleave(function () { 
+        $(".foot_page_txt").css({
+            'left':'-=5px',
+            'top':'-=5px'
+        });
+        $(".foot_page_txt").removeClass("animated pulse");
+    });
 });
