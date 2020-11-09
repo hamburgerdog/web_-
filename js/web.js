@@ -166,7 +166,7 @@ $(document).ready(function () {
         $(this).zclip({
             path:'js/ZeroClipboard.swf',
             copy:function(){
-                return $('.email_msg p').val();
+                return $(this).siblings('p').siblings('i').text();
             }
         });
         let tip = $(".email_msg_tip");
