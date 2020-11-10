@@ -260,6 +260,9 @@ p,h1,a{
 }
 .abm_page .abm_nav{
   height: 60px;
+  text-align: center;
+  padding: 6px;
+  color: white;
   background-image: url("../src/img/aboutme/purple.png");
 }
 .abm_page .abm_chat{
@@ -268,6 +271,221 @@ p,h1,a{
   position: relative;
   left: 66px;
   background-image: url("../src/img/aboutme/bg-chat.png");
+}
+.wechat{
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 780px;
+  height: 430px;
+  top: 20px;
+}
+.wechat .wechat_head{
+  display: none;
+  width: auto;
+  height: 60px;
+}
+.wechat #wc_back{
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background-color: #e1e2e3;
+  border-radius: 40px;
+  border: #e1e2e3 3px solid;
+  opacity: 0.90;
+  text-align: center;
+}
+.wechat #wc_back p{
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+  cursor: default;
+  opacity: 2;
+  top: -7px;
+  position: relative;
+}
+.wechat #wc_title{
+  cursor: pointer;
+  text-align: center;
+  background-color: #e1e2e3;
+  border: #e1e2e3 3px solid;
+  width: 450px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 40px;
+  opacity: .60;
+  position: relative;
+  top: -44px;
+}
+.wechat #wc_title p {
+  font-size: 24px;
+  cursor: pointer;
+  position: relative;
+  top: 4px;
+}
+.wechat #wc_other{
+  position: relative;
+  cursor: pointer;
+  width: 60px;
+  height: 40px;
+  background-color: #e1e2e3;
+  border-radius: 40px;
+  border: #e1e2e3 3px solid;
+  text-align: center;
+  opacity: 0.90;
+  left: 720px;
+  top: -90px;
+}
+.wechat #wc_other p {
+  cursor: pointer;
+  color: white;
+  font-size: 30px;
+  height: 20px;
+  top: -13px;
+  position: relative;
+}
+.wechat .wechat_msg{
+  width: auto;
+  height: 320px;
+}
+.wechat_msg .wechat_qust{
+  display: none;
+  width: 400px;
+  height: 40px;
+  position: relative;
+  top: 5px;
+  left: 110px;
+  margin-bottom: 10px;
+}
+.wechat_qust .wc_pic{
+  float: left;
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background-image: url("../src/img/aboutme/q_pic.jpeg");
+  box-shadow: 2px 2px 2px #e1e2e3;
+  border: 2px solid darkgrey;
+}
+.wechat_qust .wc_msg_bg{
+  float: left;
+  width: 350px;
+  height: 40px;
+}
+#q_1{
+  width: 200px;
+  margin-top: 8px;
+}
+.wechat_qust #wc_msg{
+  position: relative;
+  float: left;
+  height: 40px;
+  width: 200px;
+  border-radius: 8px;
+  background-color: #e1e2e3;
+  text-align: center;
+}
+.wechat_qust #wc_msg_trib{
+  position: relative;
+  float: left;
+  width: 0;
+  height: 0;
+  border-right: 10px solid #e1e2e3;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  top: 15px;
+}
+.wechat_answ{
+  display: none;
+  height: 40px;
+  float: right;
+  width: 500px;
+  margin-right: 105px;
+  margin-bottom: 20px;
+}
+.wechat_answ .wc_msg_bg{
+  float: right;
+  width: 200px;
+  height: 40px;
+}
+.wechat_answ .wc_pic{
+  float: right;
+  margin-left: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background-image: url("../src/img/aboutme/a_pic.jpeg");
+  box-shadow: 2px 2px 2px #e1e2e3;
+  border: 2px solid greenyellow;
+}
+.wechat_answ #wc_msg{
+  position: relative;
+  float: right;
+  height: 40px;
+  width: 130px;
+  border-radius: 8px;
+  background-color: #00c181;
+  text-align: center;
+}
+.wechat_answ #wc_msg_trib{
+  position: relative;
+  float: right;
+  width: 0;
+  height: 0;
+  border-left: 10px solid #00c181;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  top: 15px;
+  z-index: 5;
+}
+#a_1,#a_2,#a_4{
+  margin-top: 8px;
+}
+#a_3{
+  margin-top: 4px;
+  margin-bottom: 3px;
+}
+#answ_2 .wc_msg_bg{
+  width: 300px;
+}
+#answ_2 .wc_msg_bg #wc_msg{
+  width: 280px;
+}
+#answ_3{
+  height: 65px;
+}
+#answ_3 .wc_msg_bg{
+  width: 350px;
+  height: 65px;
+}
+#answ_3 .wc_msg_bg #wc_msg{
+  width: 320px;
+  height: 65px;
+}
+#answ_4 .wc_msg_bg{
+  width: 290px;
+}
+#answ_4 .wc_msg_bg #wc_msg{
+  width: 280px;
+}
+.wc_end_input{
+  display: none;
+  width: 500px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5px;
+  text-align: center;
+}
+.wc_end_input input{
+  border-radius: 20px;
+  width: 460px;
+  border: 0;
+  color: white;
+  height: 40px;
+  /* border:2px solid #94969a; */
+  /* box-shadow: 8px 8px 15px #e1e2e3; */
 }
 .email_page{
   height: 208px;

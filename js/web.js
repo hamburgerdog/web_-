@@ -214,4 +214,122 @@ $(document).ready(function () {
         });
         $(".foot_page_txt").removeClass("animated pulse");
     });
+    $("#wc_back").mouseenter(function () { 
+        $(this).css('border','white 4px solid');
+    });
+    $("#wc_back").mouseleave(function () { 
+        $(this).css('border','#e1e2e3 3px solid');
+    });
+    $("#wc_title").mouseenter(function () { 
+        $(this).css('border','white 8px solid');
+    });
+    $("#wc_title").mouseleave(function () { 
+        $(this).css('border','#e1e2e3 3px solid');
+    });
+    $("#wc_other").mouseenter(function () { 
+        $(this).css('border','white 6px solid');
+    });
+    $("#wc_other").mouseleave(function () { 
+        $(this).css('border','#e1e2e3 3px solid');
+    });
+    $("#end_input").mouseenter(function () { 
+        $(this).css({
+            'box-shadow':'8px 8px 15px #e1e2e3',
+            'border':'2px solid #94969a'
+        });
+    });
+    $("#end_input").mouseleave(function () { 
+        $(this).css({
+            'box-shadow':'0px 0px 0px ',
+            'border':'0px'
+        });
+    });
+    $(".wechat #wc_msg").mouseenter(function () { 
+        $(this).css({
+            'box-shadow':'8px 8px 15px #e1e2e3',
+            'border':'2px solid white'
+        });
+    });
+    $(".wechat #wc_msg").mouseleave(function () { 
+        $(this).css({
+            'box-shadow':'0px 0px 0px ',
+            'border':'0px'
+        });
+    });
+    $("#answ_1 #wc_msg").mouseenter(function () { 
+        $(this).css({
+            'box-shadow':'8px 8px 15px #e1e2e3',
+            'border':'2px solid white'
+        });
+    });
+    $("#answ_1 #wc_msg").mouseleave(function () { 
+        $(this).css({
+            'box-shadow':'0px 0px 0px ',
+            'border':'0px'
+        });
+    });
+    $("#answ_2 #wc_msg").mouseenter(function () { 
+        $(this).css({
+            'box-shadow':'8px 8px 15px #e1e2e3',
+            'border':'2px solid white'
+        });
+    });
+    $("#answ_2 #wc_msg").mouseleave(function () { 
+        $(this).css({
+            'box-shadow':'0px 0px 0px ',
+            'border':'0px'
+        });
+    });
+    $("#answ_3 #wc_msg").mouseenter(function () { 
+        $(this).css({
+            'box-shadow':'8px 8px 15px #e1e2e3',
+            'border':'2px solid white'
+        });
+    });
+    $("#answ_3 #wc_msg").mouseleave(function () { 
+        $(this).css({
+            'box-shadow':'0px 0px 0px ',
+            'border':'0px'
+        });
+    });
+    $("#answ_4 #wc_msg").mouseenter(function () { 
+        $(this).css({
+            'box-shadow':'8px 8px 15px #e1e2e3',
+            'border':'2px solid white'
+        });
+    });
+    $("#answ_4 #wc_msg").mouseleave(function () { 
+        $(this).css({
+            'box-shadow':'0px 0px 0px ',
+            'border':'0px'
+        });
+    });
+   $(".wechat").mouseenter(function () { 
+       $(".wechat_head").css('display','block');
+       $(".wechat_head").addClass('animated fadeInDown');
+       setTimeout(function () {
+           $(".wechat_qust").css('display','block');
+           $(".wechat_qust").addClass("animated fadeInLeft");
+       },1000)
+       setTimeout(function () {
+           $("#answ_1").css('display','block');
+           $("#answ_1").addClass("animated fadeInRight");
+       },2500)
+       setTimeout(function () {
+           $("#answ_2").css('display','block');
+           $("#answ_2").addClass("animated fadeInRight");
+       },4500)
+       setTimeout(function () {
+           $("#answ_3").css('display','block');
+           $("#answ_3").addClass("animated fadeInRight");
+       },6000)
+       setTimeout(function () {
+           $("#answ_4").css('display','block');
+           $("#answ_4").addClass("animated fadeInRight");
+       },10000)
+       setTimeout(function () {
+           $(".wc_end_input").css('display','block');
+           $(".wc_end_input").addClass("animated fadeInUp");
+       },12000)
+   });
 });
