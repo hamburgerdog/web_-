@@ -1,9 +1,29 @@
-body {
+body{
   padding-top: 0px;
-  background-color: aqua;
   background-image: url("../src/img/cool-background.png");
   position: relative;
   z-index: -100;
+}
+p,h1,a{
+  font-family: 'alibaba_puhui';
+  cursor: default;
+}
+@font-face{
+  font-family: alibaba_puhui;
+  src:  url("../src/font/alibaba-puhui/Alibaba-PuHuiTi-Regular.otf"),
+        url("../src/font/alibaba-puhui/Alibaba-PuHuiTi-Regular.ttf");
+}
+@font-face{
+  font-family: interEng;
+  src: url("../src/font/inter/Inter-UI-Regular.ttf");
+}
+@font-face{
+  font-family: apple;
+  src: url("../src/font/apple/PingFang_Bold.ttf")
+}
+@font-face{
+  font-family: japanTxt;
+  src:url("../src/font/japanTxt/japan.ttf")
 }
 
 .web_page{
@@ -15,71 +35,6 @@ body {
   /* background-image: url("../src/img/bg2.png"); */
   z-index: -2;
 }
-
-/* .starter-template {
-  padding: 3rem 1.5rem;
-  text-align: center;
-}
-
-.product-device-2 {
-  top: -25%;
-  right: auto;
-  bottom: 0;
-  left: 5%;
-  background-color: #e5e5e5; 
-}*/
-
-
-
-/*
- * Dummy devices (replace them with your own or something else entirely!)
- */
-
- /* .product-device {
-  position: absolute;
-  right: 10%;
-  bottom: -30%;
-  width: 300px;
-  height: 540px;
-  background-color: #333;
-  border-radius: 21px;
-  -webkit-transform: rotate(30deg);
-  transform: rotate(30deg);
-}
-
-.product-device::before {
-  position: absolute;
-  top: 10%;
-  right: 10px;
-  bottom: 10%;
-  left: 10px;
-  content: "";
-  background-color: rgba(255, 255, 255, .1);
-  border-radius: 5px;
-}
-
-.product-device-2 {
-  top: -25%;
-  right: auto;
-  bottom: 0;
-  left: 5%;
-  background-color: #e5e5e5;
-}
-
-.bd-placeholder-img {
-  font-size: 1.125rem;
-  text-anchor: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-} */
-
-/* @media (min-width: 768px) {
-  .bd-placeholder-img-lg {
-    font-size: 3.5rem;
-  }
-} */
 .default_page{
   background-image: url("../src/img/bg2.png");
   height: 768px;
@@ -92,11 +47,31 @@ body {
 .main_nav{
   width: auto;
   height: 60px;
-  background-image: url(../src/img/main/nav_bar.png);
+  background-color: #b87601;
+  /* background-image: url(../src/img/main/nav_bar.png); */
   border-bottom: 3px solid #3e0846;
   position: relative;
   top: 0;
   z-index: 2;
+}
+.main_nav_guang{
+  color: #3e0846;
+  position: relative;
+  left: 100px;
+  top: 5px;
+  font-size: 34px;
+  width: 200px;
+}
+.main_nav_ab{
+  width: 200px;
+  position: relative;
+  font-size: 26px;
+  left: 820px;
+  top: -55px;
+}
+.main_nav_ab a{
+  color: #3e0846;
+  font-family: 'japanTxt';
 }
 .pic_wall{
   width: 512px;
@@ -110,7 +85,29 @@ body {
 .pic_wall img{
   z-index: 2;
 }
-
+.wall_txt{
+  color: #3e0846;
+  position: relative;
+  width: 380px;
+  left: 600px;
+  top: 180px;
+  font-size: 34px;
+}
+.wall_txt p{
+  margin: 10px;
+  font-family: 'interEng';
+}
+.wall_txt p a{
+  cursor: pointer;
+}
+.wall_txt_bottom{
+  position: relative;
+  background-color: #3e0846;
+  left: 725px;
+  top: 60px;
+  width: 180px;
+  height: 2px;
+}
 .fm_page{
   width: auto;
   height: 900px;
@@ -121,6 +118,7 @@ body {
   text-align: center;
 }
 .fm_nav h1{
+  /* font-family: 'interEng'; */
   position: relative;
   color: #350600;
   top: 2px;
@@ -130,12 +128,28 @@ body {
   padding-top: 20px;
   height: 650px;
 }
+.fm_pic_1 img {
+  width: 450px;
+  height: 606px;
+  transition: 1s;
+}
+.fm_pic_2 img {
+  width: 350px;
+  height: 472px;
+  transition: 1s;
+}
+.fm_pic_3 img {
+  width: 350px;
+  height: 472px;
+  transition: 1s;
+}
 .fm_pic_1{
   position: relative;
   left: 260px;
   width: 400px;
   height: 540px;
   z-index: 2;
+  transition: 1s;
 }
 .fm_pic_2{
   position: absolute;
@@ -144,6 +158,7 @@ body {
   width: 250px;
   height: 337px;
   z-index: 1;
+  transition: 1s;
 }
 .fm_pic_3{
   position: absolute;
@@ -152,14 +167,31 @@ body {
   width: 250px;
   height: 337px;
   z-index: 1;
+  transition: 1s;
 }
 .fm_about{
+  color: #350600;
   position: relative;
   top: -20px;
   left: 112px;
   width: 800px;
   height: 200px;
   background-image: url("../src/img/aboutme/text_mask.png");
+}
+.fm_about .fm_about_txt{
+  width: 400px;
+  position: relative;
+  left: 200px;
+  text-align: center;
+  top: 10px;
+}
+.fm_txt{
+  font-size: 30px;
+  padding-top: 10px;
+}
+.fm_txt p{
+  font-family: 'interEng';
+  margin: 5px;
 }
 .shi_page{
 
@@ -168,7 +200,7 @@ body {
   background-image: url("../src/img/shi/红色分割层.png");
   text-align: center;
   position: relative;
-  z-index: 1;
+  z-index: 2;
   height: 60px;
 }
 .shi_page .shi_nav h1{
@@ -177,18 +209,65 @@ body {
   top: 4px;
   left: 0;
 }
+.shi_pic_bg{
+  background-color: white;
+  width: 840px;
+  height: 708px;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  z-index: 1;
+}
 .shi_page .shi_pic{
+  width: auto;
   height: 708px;
   position: relative;
-  left: 5%;
-  top: -2px;
+  /* left: 5%; */
+  top: 0px;
   z-index: 0;
+}
+.shi_page .shi_pic img{
+  height: 712px;
+  position: relative;
+  top: -710px;
+  z-index: 1;
+  left: 180px;
+}
+.shi_txt{
+  color: #3e0846;
+  font-size: 36px;
+  left: 620px;
+  position: relative;
+  top: -600px;
+  width: 300px;
+}
+.shi_txt p{
+  font-family: 'japanTxt';
+}
+.shi_txt .shi_head_txt{
+  position: relative;
+  margin-bottom: 40px;
+}
+.shi_txt .shi_head_txt h1{
+  font-size: 54px;
+}
+#shi_span{
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 708px;
+  position: relative;
+  top: -1161px;
+  z-index: 99;
 }
 .abm_page{
   height: 560px;
 }
 .abm_page .abm_nav{
   height: 60px;
+  text-align: center;
+  padding: 6px;
+  color: white;
   background-image: url("../src/img/aboutme/purple.png");
 }
 .abm_page .abm_chat{
@@ -198,10 +277,282 @@ body {
   left: 66px;
   background-image: url("../src/img/aboutme/bg-chat.png");
 }
+.wechat{
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 780px;
+  height: 430px;
+  top: 20px;
+}
+.wechat .wechat_head{
+  display: none;
+  width: auto;
+  height: 60px;
+}
+.wechat #wc_back{
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background-color: #e1e2e3;
+  border-radius: 40px;
+  border: #e1e2e3 3px solid;
+  opacity: 0.90;
+  text-align: center;
+}
+.wechat #wc_back p{
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+  cursor: default;
+  opacity: 2;
+  top: -7px;
+  position: relative;
+}
+.wechat #wc_title{
+  cursor: pointer;
+  text-align: center;
+  background-color: #e1e2e3;
+  border: #e1e2e3 3px solid;
+  width: 450px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 40px;
+  opacity: .60;
+  position: relative;
+  top: -44px;
+}
+.wechat #wc_title p {
+  font-size: 24px;
+  cursor: pointer;
+  position: relative;
+  top: 4px;
+}
+.wechat #wc_other{
+  position: relative;
+  cursor: pointer;
+  width: 60px;
+  height: 40px;
+  background-color: #e1e2e3;
+  border-radius: 40px;
+  border: #e1e2e3 3px solid;
+  text-align: center;
+  opacity: 0.90;
+  left: 720px;
+  top: -90px;
+}
+.wechat #wc_other p {
+  cursor: pointer;
+  color: white;
+  font-size: 30px;
+  height: 20px;
+  top: -13px;
+  position: relative;
+}
+.wechat .wechat_msg{
+  width: auto;
+  height: 320px;
+}
+.wechat_msg .wechat_qust{
+  display: none;
+  width: 400px;
+  height: 40px;
+  position: relative;
+  top: 5px;
+  left: 110px;
+  margin-bottom: 10px;
+}
+.wechat_qust .wc_pic{
+  float: left;
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background-image: url("../src/img/aboutme/q_pic.jpeg");
+  box-shadow: 2px 2px 2px #e1e2e3;
+  border: 2px solid darkgrey;
+}
+.wechat_qust .wc_msg_bg{
+  float: left;
+  width: 350px;
+  height: 40px;
+}
+#q_1{
+  width: 200px;
+  margin-top: 8px;
+}
+.wechat_qust #wc_msg{
+  position: relative;
+  float: left;
+  height: 40px;
+  width: 200px;
+  border-radius: 8px;
+  background-color: #e1e2e3;
+  text-align: center;
+}
+.wechat_qust #wc_msg_trib{
+  position: relative;
+  float: left;
+  width: 0;
+  height: 0;
+  border-right: 10px solid #e1e2e3;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  top: 15px;
+}
+.wechat_answ{
+  display: none;
+  height: 40px;
+  float: right;
+  width: 500px;
+  margin-right: 105px;
+  margin-bottom: 20px;
+}
+.wechat_answ .wc_msg_bg{
+  float: right;
+  width: 200px;
+  height: 40px;
+}
+.wechat_answ .wc_pic{
+  float: right;
+  margin-left: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background-image: url("../src/img/aboutme/a_pic.jpeg");
+  box-shadow: 2px 2px 2px #e1e2e3;
+  border: 2px solid greenyellow;
+}
+.wechat_answ #wc_msg{
+  position: relative;
+  float: right;
+  height: 40px;
+  width: 130px;
+  border-radius: 8px;
+  background-color: #00c181;
+  text-align: center;
+}
+.wechat_answ #wc_msg_trib{
+  position: relative;
+  float: right;
+  width: 0;
+  height: 0;
+  border-left: 10px solid #00c181;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  top: 15px;
+  z-index: 5;
+}
+#a_1,#a_2,#a_4{
+  margin-top: 8px;
+}
+#a_3{
+  margin-top: 4px;
+  margin-bottom: 3px;
+}
+#answ_2 .wc_msg_bg{
+  width: 300px;
+}
+#answ_2 .wc_msg_bg #wc_msg{
+  width: 280px;
+}
+#answ_3{
+  height: 65px;
+}
+#answ_3 .wc_msg_bg{
+  width: 350px;
+  height: 65px;
+}
+#answ_3 .wc_msg_bg #wc_msg{
+  width: 320px;
+  height: 65px;
+}
+#answ_4 .wc_msg_bg{
+  width: 290px;
+}
+#answ_4 .wc_msg_bg #wc_msg{
+  width: 280px;
+}
+.wc_end_input{
+  display: none;
+  width: 500px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5px;
+  text-align: center;
+}
+.wc_end_input input{
+  border-radius: 20px;
+  width: 460px;
+  border: 0;
+  color: white;
+  height: 40px;
+  /* border:2px solid #94969a; */
+  /* box-shadow: 8px 8px 15px #e1e2e3; */
+}
 .email_page{
   height: 208px;
   background-color: white;
   /* 移入事件颜色改变为#f6fafc */
+  cursor: default;
+}
+
+.email_page .email_txt{
+  margin-left: 200px;
+  padding-top: 30px;
+}
+
+.email_page .email_txt .email_txt1{
+  font-size: 24px;
+}
+.email_page .email_txt .email_txt2{
+  font-size: 15px;
+  margin-top: 15px;
+}
+.email_page .email_txt .email_msg{
+  width: 440px;
+  height: 50px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 2px solid #e1e2e3;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+.email_page .email_txt .email_msg p{
+  font-size: 20px;
+  margin-top: 8px;
+}
+.email_page .email_msg_tip{
+  height: 136px;
+  width: 240px;
+  margin: 10px;
+  position: relative;
+  left: 750px;
+  top: -140px;
+  border-radius: 10px;
+  display: none;
+  box-shadow: 1px 1px 10px #e1e2e3;
+}
+.email_page .email_msg_tip .tip_top{
+  width: auto;
+  height: 58px;
+  background-color: #39c4f7;
+  color: white;
+  text-align: center;
+  font-size: 36px;
+  border-radius: 10px 10px 0px 0px;
+}
+.email_page .email_msg_tip .tip_msg{
+  width: auto;
+  height: 78px;
+  background-color: white;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 15px;
+  border-radius: 0 0 10px 10px ;
 }
 .author_page{
   height: 400px;
@@ -248,14 +599,31 @@ body {
 .msg_grade{
   font-size: 18px;
   color: #b2b4b6;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  margin-top: 10px;
 }
 .msg_info{
   margin-left: 20px;
-  font-size: 20px;
+  font-size: 23px;
   color: #94969a;
+  font-family: 'japanTxt';
 }
 .foot_page{
   height: 160px;
   background-color: white;
+}
+.foot_page_txt{
+  color: #94969a;
+  width: 500px;
+  position: relative;
+  margin-left: auto;
+  top: 45px;
+  margin-right: auto;
+  text-align: center;
+}
+.foot_page_txt p{
+  margin: 0;
+}
+.foot_page_txt a{
+  color: #00c181;
 }
