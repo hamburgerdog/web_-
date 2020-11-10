@@ -25,10 +25,6 @@ p,h1,a{
   font-family: japanTxt;
   src:url("../src/font/japanTxt/japan.ttf")
 }
-@font-face{
-  font-family: genshin;
-  src:url("../src/font/japanTxt/GenShinGothic-Monospace-Regular.ttf")
-}
 
 .web_page{
   position: relative;
