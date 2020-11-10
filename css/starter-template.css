@@ -251,6 +251,15 @@ p,h1,a{
 .shi_txt .shi_head_txt h1{
   font-size: 54px;
 }
+#shi_span{
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 708px;
+  position: relative;
+  top: -1161px;
+  z-index: 99;
+}
 .abm_page{
   height: 560px;
 }

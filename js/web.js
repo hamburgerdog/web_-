@@ -326,10 +326,23 @@ $(document).ready(function () {
        setTimeout(function () {
            $("#answ_4").css('display','block');
            $("#answ_4").addClass("animated fadeInRight");
-       },10000)
+       },8000)
        setTimeout(function () {
            $(".wc_end_input").css('display','block');
            $(".wc_end_input").addClass("animated fadeInUp");
-       },12000)
+       },10000)
    });
+    $('#shi_span').mouseenter(e => {// 给最外层的 .banner 添加鼠标移入事件
+        let initX = e.pageX// 获得刚移入时鼠标的初始 x 位置
+        
+        $('#shi_span').mousemove(e => {// 给 .banner 添加鼠标移动事件
+            $('.shi_txt').css('filter', 'blur(' + Math.abs(4 - (e.pageX - initX) / 60 ) + 'px)')
+            $('.shi_txt').css('transform', 'translate(' + ((e.pageX - initX) / 15) + 'px, 0px)')
+        })// 背景不需要进行移动, 只需要更改 blur() 值
+    
+    })
+        $("#shi_span").mouseleave(function () { 
+            $('.shi_txt').css({'filter':'blur(0px)'})
+            $(".shi_txt").transition({transform:'translateX(0px)'},190,'linear')
+        }); 
 });
