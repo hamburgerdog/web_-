@@ -5,7 +5,8 @@
     <title>光 | 网页设计</title>
     <script src="js/jquery-3.5.1.js"></script>
     <script src="js/web.js"></script>
-    <script src="js/jquery-zclip.min.js"></script>
+    <script src="js/jquery.transit.js"></script>
+    <script src="js/clipboard.min.js"></script>
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/starter-template.css">
@@ -20,7 +21,7 @@
             <p>光.cn</p>
           </div>
           <div class="main_nav_ab">
-            <p>关于我们 | 引用</p>
+            <a href="#about">关于我们 | 引用</a>
           </div>
         </div>
         <div class="main_container">
@@ -28,14 +29,11 @@
             <img src="src/img/main/wall.png" alt="壁画">
           </div>
           <div class="wall_txt">
-            <p>欢迎来到 光</p>
-            <p>我们即将同你一起开启</p>
-            <p>来一场<a>文化寻根之旅</a></p>
-            <p><br>现在，就让我们开始吧</p>
+            <p>欢迎来到 光</p><p>我们即将同你一起开启</p><p>一场<a>文化寻根之旅</a></p><p><br>现在，就让我们开始吧!</p>
           </div>
-          <div class="wall_txt_bottom">_______</div>
+          <div class="wall_txt_bottom"></div>
         </div>
-
+ 
         <div></div>
       </div>
 
@@ -46,20 +44,31 @@
         </div>
         <!-- 轮播图 -->
         <div class="fm_pics">
-          <div class="fm_pic_1">
-            <img src="src/img/fenmo/2.png" alt="主图">
+          <div id="fm_pic" class="fm_pic_1">
+            <img src="src/img/fenmo/2.png" class="img_stop" alt="主图">
           </div>
-          <div class="fm_pic_2">
-            <img src="src/img/fenmo/1.png" alt="左图">
+          <div id="fm_pic" class="fm_pic_2">
+            <img src="src/img/fenmo/1.png" class="img_stop" alt="左图">
           </div>
-          <div class="fm_pic_3">
-            <img src="src/img/fenmo/3.png" alt="右图">
+          <div id="fm_pic" class="fm_pic_3">
+            <img src="src/img/fenmo/3.png" class="img_stop" alt="右图">
           </div>
+        </div>
+        <div class="carousel_btn">
+          <a  class="fm_pic_btm right_btn img_stop"></a>
+          <a  class="fm_pic_btm left_btn img_stop"></a>
+        </div>
+        <div class="circles img_stop">
+          <ol>
+            <li></li>
+            <li class="cur"></li>
+            <li></li>
+          </ol>
         </div>
         <div class="fm_about">
           <div class="fm_about_txt">
             <div class="fm_head_txt">
-            <h1>粉墨 · fen mo</h1>
+            <h1 style="font-family: 'apple';">粉墨 · fen mo</h1>
           </div>
           <div class="fm_txt">
             <p>生旦净末丑，折射俗世百态</p>
@@ -76,37 +85,92 @@
         </div>
         <div class="shi_pic">
           <div class="shi_pic_bg"></div>
-          <img src="src/img/shi/lion.png" alt="">
+          <img class="shi_img" src="src/img/shi/lion.png" alt="">
+          
         </div>
         <div class="shi_txt">
           <div class="shi_head_txt">
             <h1>诗 · shi</h1>
           </div>
           <div class="shi_txt1">
-            <p>愿我如星君如月</p>
-            <p>夜夜流光相皎洁</p>
+            <p style="font-weight: 600;">愿我如星君如月</p>
+            <p style="font-weight: 600;">夜夜流光相皎洁</p>
             <p>月暂晦 星常明</p>
             <p>留明待月复</p>
             <p>三五共盈盈</p>
           </div>
         </div> 
+        <div id="shi_span"></div>
+        <div id="shi_bottom"></div>
+        <!-- <div id="shi_paper">
+          <img class="paper_img" src="src/img/shi/paper.png" alt="">
+        </div> -->
       </div>
 
       <!-- 网页介绍页 -->
-      <div class="default_page abm_page">
-        <div class="abm_nav"></div>
-        <div class="abm_chat"></div>
+      <div class="default_page abm_page" id="about">
+        <div class="abm_nav"><h1>ABOUT US</h1></div>
+        <div class="abm_chat">
+          <div class="wechat">
+            <div class="wechat_head">
+              <div id="wc_back"><p style="cursor: pointer;"><</p></div>
+              <div id="wc_title"><p>快乐滴划水群 (3)</p></div>
+              <div id="wc_other"><p>...</p></div>
+            </div>
+            <div class="wechat_msg">
+              <div class="wechat_qust">
+                <div class="wc_pic"></div>
+                <div class="wc_msg_bg">
+                  <div id="wc_msg_trib"></div>
+                  <div id="wc_msg"><p id="q_1">为什么网页命名为'光'呢？</p></div>
+                </div>
+              </div>
+              <div class="wechat_answ" id="answ_1">
+                <div class="wc_pic"></div>
+                <div class="wc_msg_bg">
+                  <div id="wc_msg_trib"></div>
+                  <div id="wc_msg"><p id="a_1">'光'，即流光</p></div>
+                </div>
+              </div>
+              <div class="wechat_answ" id="answ_2">
+                <div class="wc_pic"></div>
+                <div class="wc_msg_bg">
+                  <div id="wc_msg_trib"></div>
+                  <div id="wc_msg"><p id="a_2">取自 '诗' 部分的 "夜夜流光相皎洁"</p></div>
+                </div>
+              </div>
+              <div class="wechat_answ" id="answ_3">
+                <div class="wc_pic"></div>
+                <div class="wc_msg_bg">
+                  <div id="wc_msg_trib"></div>
+                  <div id="wc_msg">
+                    <p id="a_3">如果把我们那悠长的传统文化比作月亮</p>
+                    <p id="a_3">那我希望我们都要做那一颗颗明亮的星</p>
+                  </div>
+                </div>
+              </div>
+              <div class="wechat_answ" id="answ_4">
+                <div class="wc_pic"></div>
+                <div class="wc_msg_bg">
+                  <div id="wc_msg_trib"></div>
+                  <div id="wc_msg"><p id="a_4">星伴月，月照星，待到三五共盈盈</p></div>
+                </div>
+              </div>
+            </div>
+            <div class="wc_end_input"><input id="end_input" type="text"></div>
+          </div>
+        </div>
       </div>
       <!-- 联系页 -->
       <div class="email_page">
         <div class="email_txt">
           <div class="email_txt1">𝙃𝙤𝙬 𝙩𝙤 𝙘𝙤𝙣𝙩𝙖𝙘𝙩 𝙪𝙨<br></div>
-          <div class="email_txt2"><i><u>点击以复制我们的联系邮箱</u></i><br></div>
-          <div class="email_msg"><p><i style="cursor: pointer;">❑ Liu·guang@web.cn</i></p></div>
+          <div class="email_txt2"><i><u>点击下方以复制我们的联系邮箱</u></i><br></div>
+          <button class="email_msg btn" data-clipboard-text="Liu·guang@web.cn"><p><i style="cursor: pointer;font-family: 'interEng';">Liu·guang@web.cn</i></p></button>
         </div>
         <div class="email_msg_tip">
           <div class="tip_top"><p>𝗦𝘂𝗰𝗰𝗲𝘀𝘀</p></div>
-          <div class="tip_msg">复 制 成 功</div>
+          <div class="tip_msg"><p>复 制 成 功</p></div>
         </div>
       </div>
       <!-- 作者页 -->
@@ -126,9 +190,9 @@
             <img  style="width: 120px;height: 120px;" src='src/img/author/永聪同学.png'/>
           </div>
           <div class="msg_txt">
-            <div class="msg_name">永聪同学</div>
+            <div class="msg_name">situ2001</div>
             <div class="msg_grade">大一在读</div>
-            <div class="msg_info">古来贤者皆寂寞，<br>惟有饮者留其名。</div>
+            <div class="msg_info">苟利国家生死以，<br>岂因祸福避趋之。</div>
           </div>
         </div>
         <div id="card3" class="author_card">
@@ -143,77 +207,13 @@
         </div>
       </div>
       <!-- 脚注 -->
-      <div class="foot_page"></div>
-
-      <!-- <div class="col">
-        <br>
-        <p>欢迎来到 光</p>
-        <p>我们即将同你一起开启</p>
-        <p>一场文化寻根之旅</p>
-        <br>
-        <p>现在，就让我们开始吧！</p>
-        <br> 
-      </div> -->
-
-      <!--下面的诗句-->
-      <!-- <div class="text1" style="text-align: center;"> -->
-        <!-- <p>粉墨 FEN MO</p>
-      <p>生旦净末丑，折射俗世百态<br>工商角徽羽，弹尽红尘五音</p> -->
-
-      <!-- <div class="col"> -->
-        <!-- <p><b>诗 shi</b></p>
-            <p>
-              愿我如星君如月<br>
-              夜夜流光相皎洁<br>
-              月暂晦 星常明<br>
-              留明待月复<br>
-              三五共盈盈
-            </p> -->
-          <!-- </div>
+      <div class="foot_page">
+        <div class="foot_page_txt">
+          <p>京剧插图引用自 <a href="https://www.zcool.com.cn/u/14514219">[ RICK迁 ]</a>&nbsp;&nbsp;部分字体引用于网站 <a href="https://qwerty.dev//#beautiful-dingbats">&nbsp;[ qwerty ]</a></p>
+          <p>首页飞天壁画为 <a href="https://www.e-dunhuang.com">[ 数字敦煌 ]</a> 资料&nbsp;&nbsp;部分动画引用于动画库 <a href="https://animate.style">[ animate ]</a></p>
+          <p>👨‍💻‍ Please vote for us ！Thank U ~&nbsp;💛&nbsp;💚&nbsp;💙 </p>
         </div>
-      </div> -->
-
-      <!--why light-->
-      <!-- <div class="container qa"> -->
-        <!-- <p>为什么网站命名为光？</p>
-        <p style="text-align: right;">
-          <b>光，即流光</b>
-        </p>
-        <p style="text-align: right;">
-          取自《诗》部分的“夜夜流光相皎洁”<br>
-          如果把我们那悠长的传统文化比作月亮<br>
-          那我希望我们每个人都可以做一颗明亮的星<br>
-          星伴月，月照星，夜夜流光相皎洁
-        </p> -->
-      <!-- </div> -->
-
+      </div>
     </div>
-    <!--script-->
-    <script>
-      var fmPics = [];
-      var fmClassName = [];
-
-      //dummy push(tired
-      fmPics.push(document.getElementsByClassName("fm_pic_1")[0]);
-      fmPics.push(document.getElementsByClassName("fm_pic_2")[0]);
-      fmPics.push(document.getElementsByClassName("fm_pic_3")[0]);
-
-      //get class name
-      for (var e of fmPics) {
-        fmClassName.push(e.getAttribute("class"));
-      }
-
-      setInterval(function next() {
-        //swap the class
-        fmClassName.unshift(fmClassName[fmClassName.length - 1]);
-        fmClassName.pop();
-        //process swaping
-        for (i = 0; i < fmClassName.length; i++) {
-          fmPics[i].setAttribute("class", fmClassName[i]);
-        }
-      }, 2000);
-    </script>
   </body>
-  <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
-      <!-- <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.min.js"></script> -->
 </html>
