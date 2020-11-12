@@ -103,9 +103,9 @@ p,h1,a{
 .wall_txt_bottom{
   position: relative;
   background-color: #3e0846;
-  left: 725px;
+  left: 680px;
   top: 60px;
-  width: 180px;
+  width: 200px;
   height: 2px;
 }
 .fm_page{

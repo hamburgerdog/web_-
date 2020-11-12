@@ -6,7 +6,7 @@
     <script src="js/jquery-3.5.1.js"></script>
     <script src="js/web.js"></script>
     <script src="js/jquery.transit.js"></script>
-    <script src="js/jquery-zclip.min.js"></script>
+    <script src="js/clipboard.min.js"></script>
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/starter-template.css">
@@ -29,14 +29,11 @@
             <img src="src/img/main/wall.png" alt="壁画">
           </div>
           <div class="wall_txt">
-            <p>欢迎来到 光</p>
-            <p>我们即将同你一起开启</p>
-            <p>一场<a>文化寻根之旅</a></p>
-            <p><br>现在，就让我们开始吧!</p>
+            <p>欢迎来到 光</p><p>我们即将同你一起开启</p><p>一场<a>文化寻根之旅</a></p><p><br>现在，就让我们开始吧!</p>
           </div>
           <div class="wall_txt_bottom"></div>
         </div>
-
+ 
         <div></div>
       </div>
 
@@ -168,8 +165,8 @@
       <div class="email_page">
         <div class="email_txt">
           <div class="email_txt1">𝙃𝙤𝙬 𝙩𝙤 𝙘𝙤𝙣𝙩𝙖𝙘𝙩 𝙪𝙨<br></div>
-          <div class="email_txt2"><i><u>点击以复制我们的联系邮箱</u></i><br></div>
-          <div class="email_msg"><p><i style="cursor: pointer;font-family: 'interEng';">❑ Liu·guang@web.cn</i></p></div>
+          <div class="email_txt2"><i><u>点击下方以复制我们的联系邮箱</u></i><br></div>
+          <button class="email_msg btn" data-clipboard-text="Liu·guang@web.cn"><p><i style="cursor: pointer;font-family: 'interEng';">Liu·guang@web.cn</i></p></button>
         </div>
         <div class="email_msg_tip">
           <div class="tip_top"><p>𝗦𝘂𝗰𝗰𝗲𝘀𝘀</p></div>
@@ -193,9 +190,9 @@
             <img  style="width: 120px;height: 120px;" src='src/img/author/永聪同学.png'/>
           </div>
           <div class="msg_txt">
-            <div class="msg_name">永聪同学</div>
+            <div class="msg_name">situ2001</div>
             <div class="msg_grade">大一在读</div>
-            <div class="msg_info">古来贤者皆寂寞，<br>惟有饮者留其名。</div>
+            <div class="msg_info">苟利国家生死以，<br>岂因祸福避趋之。</div>
           </div>
         </div>
         <div id="card3" class="author_card">
@@ -218,56 +215,23 @@
         </div>
       </div>
     </div>
-<!--script-->
-<script>
-// var fmPics = [];
-// var fmClassName = [];
+    <script>
+      //instantiate Clipboard
+      var clipboard = new ClipboardJS('.btn');
 
-// //dummy push(tired
-// fmPics.push(document.getElementsByClassName("fm_pic_1")[0]);
-// fmPics.push(document.getElementsByClassName("fm_pic_2")[0]);
-// fmPics.push(document.getElementsByClassName("fm_pic_3")[0]);
-
-// //get class name
-// for (var e of fmPics) {
-//   fmClassName.push(e.getAttribute("class"));
-// }
-
-// setInterval(function next() {
-//   //swap the class
-//   fmClassName.unshift(fmClassName[fmClassName.length - 1]);
-//   fmClassName.pop();
-//   //process swaping
-//   for (i = 0; i < fmClassName.length; i++) {
-//     fmPics[i].setAttribute("class", fmClassName[i]);
-//     idx++;
-//   }
- 
-// }, 2000);
-//左按钮
-// $(".right_btn").click(function() {
-// 		//alert(11);
-// 		//防止动画排队
-// 		if ($("ul li").is(":animated")&&!god) {
-// 			return;
-// 		}
-// 		posArrary.unshift(posArrary.pop());
-// //		unshift() 方法可向数组的开头添加一个或更多元素，并返回新的长度。
-// //		push() 方法可以给数组末尾添加一个或多个数组项。
-// //		pop() 方法可以从数组的末尾删除一个数组项，并返回删除的数组项
-// //		shift() 方法和 pop() 方法刚好相反，它可以删除数组的第一项，并返回删除的数组项
-// 		zindexArrary.unshift(zindexArrary.pop());
-// 		maskArrary.unshift(maskArrary.pop());
-// 		setEveryLiByArr();
-// 		idx++;
-		// //图片到最后一张返回第一张
-		// if (idx > 10) {
-		// 	idx = 0;
-		// }
-		// //小圆点跟随图片移动
-		// $("ol li").eq(idx).addClass("cur").siblings().removeClass("cur");
-// 	});
-</script>
+      //var texts = document.getElementsByClassName("wall_txt")[0].getElementsByTagName("p");
+      var texts = document.getElementsByClassName("wall_txt")[0];
+      var str = texts.innerHTML.trim();
+      var length = str.length;
+      var index = 0;
+      setInterval(function() {
+        index++;
+        texts.innerHTML = str.substr(0, index);
+        if (texts.innerHTML == length) {
+          clearInterval();
+        }
+      }, 80);
+    </script>
   </body>
   <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
       <!-- <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.min.js"></script> -->
