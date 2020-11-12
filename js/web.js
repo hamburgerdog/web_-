@@ -1,4 +1,22 @@
 $(document).ready(function () {
+    $(".fm_pic_1 img").click(function (e) { 
+        $(this).addClass("animated pulse");    
+    });
+    $(".fm_pic_1 img").mouseleave(function (e) { 
+        $(this).removeClass("animated pulse");    
+    });
+    $(".fm_pic_2 img").click(function (e) { 
+        $(this).addClass("animated pulse");    
+    });
+    $(".fm_pic_2 img").mouseleave(function (e) { 
+        $(this).removeClass("animated pulse");    
+    });
+    $(".fm_pic_3 img").click(function (e) { 
+        $(this).addClass("animated pulse");    
+    });
+    $(".fm_pic_3 img").mouseleave(function (e) { 
+        $(this).removeClass("animated pulse");    
+    });
     $("#card1").mouseenter(function () { 
         $(this).addClass("card_select");
         $(this).css({
@@ -592,6 +610,16 @@ $(document).ready(function () {
             'display':'block'
         });
         $(".pic_wall").addClass("animated fadeIn");
+        $(".main_nav_guang").css({
+            "animation-duration":"5s",
+            'display':'block'
+        });
+        $(".main_nav_guang").addClass("animated fadeIn");
+        $(".main_nav_ab").css({
+            "animation-duration":"5s",
+            'display':'block'
+        });
+        $(".main_nav_ab").addClass("animated fadeIn");
     },500)
     let wallTXT;
     function insertTxt(){

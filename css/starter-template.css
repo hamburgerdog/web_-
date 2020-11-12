@@ -55,6 +55,7 @@ p,h1,a{
   z-index: 2;
 }
 .main_nav_guang{
+  display: none;
   color: #3e0846;
   position: relative;
   left: 100px;
@@ -63,6 +64,7 @@ p,h1,a{
   width: 200px;
 }
 .main_nav_ab{
+  display: none;
   width: 200px;
   position: relative;
   font-size: 27px;
@@ -206,6 +208,7 @@ p,h1,a{
 	transform: rotate(45deg);
   z-index: 999;
   opacity: 0.5;
+  cursor: pointer;
 }
 .right_btn{
 	right: 108px;
@@ -230,6 +233,7 @@ p,h1,a{
 	list-style: none;
 }
 .circles ol li{
+  cursor: pointer;
 	float: left;
 	margin-right: 10px;
 	background-color: #eee;
