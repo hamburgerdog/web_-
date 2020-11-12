@@ -6,7 +6,7 @@
     <script src="js/jquery-3.5.1.js"></script>
     <script src="js/web.js"></script>
     <script src="js/jquery.transit.js"></script>
-    <script src="js/jquery-zclip.min.js"></script>
+    <script src="js/clipboard.min.js"></script>
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/starter-template.css">
@@ -150,7 +150,7 @@
         <div class="email_txt">
           <div class="email_txt1">𝙃𝙤𝙬 𝙩𝙤 𝙘𝙤𝙣𝙩𝙖𝙘𝙩 𝙪𝙨<br></div>
           <div class="email_txt2"><i><u>点击以复制我们的联系邮箱</u></i><br></div>
-          <div class="email_msg"><p><i style="cursor: pointer;font-family: 'interEng';">❑ Liu·guang@web.cn</i></p></div>
+          <button class="email_msg btn" data-clipboard-text="Liu·guang@web.cn"><p><i style="cursor: pointer;font-family: 'interEng';">Liu·guang@web.cn</i></p></button>
         </div>
         <div class="email_msg_tip">
           <div class="tip_top"><p>𝗦𝘂𝗰𝗰𝗲𝘀𝘀</p></div>
@@ -201,6 +201,10 @@
     </div>
     <!--script-->
     <script>
+      //instantiate Clipboard
+      var clipboard = new ClipboardJS('.btn');
+
+      //variables
       var fmPics = [];
       var fmClassName = [];
 

@@ -163,12 +163,6 @@ $(document).ready(function () {
     });
     $(".email_msg").click(function (e) { 
         $(this).addClass("animated bounceIn");
-        $(this).zclip({
-            path:'js/ZeroClipboard.swf',
-            copy:function(){
-                return $(this).siblings('p').siblings('i').text();
-            }
-        });
         let tip = $(".email_msg_tip");
         tip.css('display','block');
         tip.addClass("animated fadeInDown");
