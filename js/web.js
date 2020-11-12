@@ -577,4 +577,36 @@ $(document).ready(function () {
     lastClick = Date.now();
     next();}
     });
+
+    //instantiate Clipboard
+    let clipboard = new ClipboardJS('.btn');
+
+    //let texts = document.getElementsByClassName("wall_txt")[0].getElementsByTagName("p");
+    let texts = document.getElementsByClassName("wall_txt")[0];
+    let str = texts.innerHTML.trim();
+    let length = str.length;
+    let index = 0;
+    setTimeout(function(){
+        $(".pic_wall").css({
+            "animation-duration":"20s",
+            'display':'block'
+        });
+        $(".pic_wall").addClass("animated fadeIn");
+    },500)
+    let wallTXT;
+    function insertTxt(){
+        wallTXT=setInterval(function() {
+        index++;
+        texts.innerHTML = str.substr(0, index);
+        if (texts.innerHTML == length) {
+          clearInterval();
+        }
+      }, 180);
+    }
+    setTimeout(insertTxt(),1500);
+    setTimeout(function(){
+        $(".wall_txt_bottom").css('display', 'block');
+        $(".wall_txt_bottom").addClass("animated fadeInLeft");
+        clearInterval(wallTXT);
+    },14500)
 });

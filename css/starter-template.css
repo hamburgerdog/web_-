@@ -65,15 +65,17 @@ p,h1,a{
 .main_nav_ab{
   width: 200px;
   position: relative;
-  font-size: 26px;
-  left: 820px;
-  top: -55px;
+  font-size: 27px;
+  left: 800px;
+  font-weight: 700;
+  top: -58px;
 }
 .main_nav_ab a{
   color: #3e0846;
   font-family: 'japanTxt';
 }
 .pic_wall{
+  display: none;
   width: 512px;
   margin-left: 20px;
   border-left: 2px solid #3e0846;
@@ -88,10 +90,10 @@ p,h1,a{
 .wall_txt{
   color: #3e0846;
   position: relative;
-  width: 380px;
-  left: 600px;
-  top: 180px;
-  font-size: 34px;
+  width: 440px;
+  left: 580px;
+  top: 150px;
+  font-size: 38px;
 }
 .wall_txt p{
   margin: 10px;
@@ -102,9 +104,10 @@ p,h1,a{
 }
 .wall_txt_bottom{
   position: relative;
+  display: none;
   background-color: #3e0846;
   left: 680px;
-  top: 60px;
+  top: 20px;
   width: 200px;
   height: 2px;
 }
@@ -598,7 +601,7 @@ p,h1,a{
 }
 .email_page .email_txt .email_msg p{
   font-size: 20px;
-  margin-top: 8px;
+  margin-top: 2px;
 }
 .email_page .email_msg_tip{
   height: 136px;
